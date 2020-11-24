@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/current_cat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Category"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/questions"
+        />
+
+    <TextView
+        android:id="@+id/questions"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/5 Questions"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_cat"
+        />
+    <TextView
+        android:id="@+id/score"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questions"
+        />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 point per question"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/score"
+        />
+
+
+    <TextView
+        android:id="@+id/question_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q1: _____ Students finished the test"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorBlack"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <RadioGroup
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/answersgrp"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_txt"
+        >
+
+        <!--android:layout-->
+
+
+        <!--android:checkedButton="@+id/radioButton"-->
+
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/radioButton"
+            android:checked="false"
+            android:text="No"/>
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/radioButton_1"
+            android:checked="false"
+            android:text="Not"/>
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/radioButton_2"
+            android:checked="false"
+            android:visibility="gone"
+            android:text="Not"/>
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/radioButton_3"
+            android:checked="false"
+            android:visibility="gone"
+            android:text="Not"/>
+
+
+    </RadioGroup>
+
+
+
+
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_custom"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/skip"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/next"
+        />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_custom"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/next"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/skip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
