@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".CategoryActivity">
 
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/btn_custom"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Back"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
@@ -17,7 +30,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_btn"
         app:layout_constraintBottom_toTopOf="@id/btn_cat"
         tools:ignore="RtlCompat" />
 

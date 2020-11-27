@@ -14,6 +14,7 @@ public class EnglishSecondActivity extends AppCompatActivity {
     Button btn_cat_2;
     Button btn_cat_3;
     Button btn_cat_4;
+    Button back_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +55,12 @@ public class EnglishSecondActivity extends AppCompatActivity {
 
             }
         });
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public void switchActivity(int cat){
@@ -68,5 +75,7 @@ public class EnglishSecondActivity extends AppCompatActivity {
         btn_cat_2 = findViewById(R.id.btn_cat_2);
         btn_cat_3 = findViewById(R.id.btn_cat_3);
         btn_cat_4 = findViewById(R.id.btn_cat_4);
+        back_btn = findViewById(R.id.back_btn);
+
     }
 }

@@ -20,6 +20,7 @@ public class ResultActivity extends AppCompatActivity {
     String points;
     String questionSkip;
     Button main_cat;
+    Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,14 @@ public class ResultActivity extends AppCompatActivity {
                 finishAffinity();
             }
         });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(ResultActivity.this, MainActivity.class);
+                startActivity(intent1);
+                finishAffinity();
+            }
+        });
 
     }
     public void initComponents(){
@@ -46,6 +55,7 @@ public class ResultActivity extends AppCompatActivity {
         total_points = findViewById(R.id.total_points);
         questions_skip = findViewById(R.id.questions_skip);
         main_cat = findViewById(R.id.main_cat);
+        logout = findViewById(R.id.logout);
     }
     public void setValues(){
         final Intent intent = getIntent();

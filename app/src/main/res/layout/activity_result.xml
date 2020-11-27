@@ -21,6 +21,20 @@
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintStart_toStartOf="parent"/>
 
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/logout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:background="@drawable/btn_custom"
+      android:text="logout"
+      android:textColor="#FFFF"
+      android:padding="20dp"
+      android:layout_margin="20dp"
+      />
+
+
   <androidx.appcompat.widget.AppCompatTextView
       android:id="@+id/total_points"
       android:layout_width="wrap_content"

@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         initComponents();
 
-        et_email.setText("a@g.com");
-        et_password.setText("123");
+/*        et_email.setText("aaa@g.com");
+        et_password.setText("123");*/
 
         register_image.setOnClickListener(new View.OnClickListener() {
             @Override

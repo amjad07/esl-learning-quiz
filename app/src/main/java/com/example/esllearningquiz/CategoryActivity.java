@@ -10,6 +10,7 @@ import android.widget.Button;
 public class CategoryActivity extends AppCompatActivity {
 
     Button btn_cat;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +25,6 @@ public class CategoryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
