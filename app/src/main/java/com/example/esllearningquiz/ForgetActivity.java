@@ -1,5 +1,6 @@
 package com.example.esllearningquiz;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -13,19 +14,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class ForgetActivity extends AppCompatActivity {
 
     Button btn_login;
-    TextView reset_ps;
-    EditText et_email, et_password;
+    EditText et_answer;
+    TextView et_email;
     SharedPreferences sharedPref;
-    String email,pswrd;
+    String  answer;
 
     ImageView register_image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_forget);
 
 
         initComponents();
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         register_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(ForgetActivity.this, MainActivity.class);
                 startActivity(intent);
                 finishAffinity();
             }
@@ -44,33 +45,21 @@ public class MainActivity extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sharedPref = ( MainActivity.this).getSharedPreferences("myfile", Context.MODE_PRIVATE);
+                sharedPref = ( ForgetActivity.this).getSharedPreferences("myfile", Context.MODE_PRIVATE);
 
                 //boolean check = sharedPref.getBoolean("check",false);
-                pswrd = sharedPref.getString("et_password","");
-                email = sharedPref.getString("et_email","");
+                answer = sharedPref.getString("sec_answer","@!!##@!");
 
-                if(et_email.getText().toString().equals(email)  && et_password.getText().toString().equals(pswrd)){
+
+                if( et_answer.getText().toString().equals(answer)){
 
                     switchActivity();
 
                 }
                 else {
-                    Toast.makeText(MainActivity.this,"Credentials do\'not match",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgetActivity.this,"Answer do\'not match",Toast.LENGTH_SHORT).show();
 
                 }
-
-            }
-        });
-        reset_ps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Intent intent = new Intent(MainActivity.this, ForgetActivity.class);
-                startActivity(intent);
-                finishAffinity();
-
 
             }
         });
@@ -78,15 +67,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void switchActivity(){
-        Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+        Intent intent = new Intent(ForgetActivity.this, NewCredentials.class);
         startActivity(intent);
     }
 
     public void initComponents(){
         register_image = findViewById(R.id.register_image);
         btn_login = findViewById(R.id.btn_login);
-        reset_ps = findViewById(R.id.reset_ps);
         et_email = findViewById(R.id.et_password1);
-        et_password = findViewById(R.id.et_password_again);
+        et_answer = findViewById(R.id.et_password_again);
     }
 }

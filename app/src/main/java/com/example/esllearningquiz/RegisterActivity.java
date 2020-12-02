@@ -19,7 +19,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     Button btn_register;
     ImageView login_activity;
-    EditText et_name,et_email,et_password,dob;
+    EditText et_name,et_email,et_password,dob,answer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +28,10 @@ public class RegisterActivity extends AppCompatActivity {
         btn_register = findViewById(R.id.btn_register);
         login_activity = findViewById(R.id.login_activity);
         et_name = findViewById(R.id.et_name);
-        et_email = findViewById(R.id.et_email);
-        et_password = findViewById(R.id.et_password);
+        et_email = findViewById(R.id.et_password1);
+        et_password = findViewById(R.id.et_password_again);
         dob = findViewById(R.id.dob);
+        answer = findViewById(R.id.answer);
 
 
         login_activity.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(et_name.getText().toString() != null && et_name.getText().toString() != null &&et_name.getText().toString() != null &&et_name.getText().toString() != null ){
+                if(et_name.getText().toString() != null && et_name.getText().toString() != null &&et_name.getText().toString() != null && answer.getText().toString() != null ){
                     if(isValidEmail(et_email.getText().toString())){
 
                         SharedPreferences.Editor editor = ((Activity) RegisterActivity.this).getSharedPreferences("myfile", Context.MODE_PRIVATE).edit();
@@ -56,6 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
                         editor.putString("et_password",et_password.getText().toString());
                         editor.putString("dob",dob.getText().toString());
                         editor.putString("et_name",et_name.getText().toString());
+                        editor.putString("sec_answer",answer.getText().toString());
                         editor.apply();
                         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                         startActivity(intent);

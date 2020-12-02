@@ -5,26 +5,11 @@
     android:layout_height="match_parent"
     >
 
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="50sp"
-        android:textColor="#DA8607"
-        android:fontFamily="@font/indigo_daisy"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentTop="true"
-        tools:ignore="RtlCompat" />
-
     <TextView
         android:id="@+id/tv_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tag"
+        android:text="Forget Password"
         android:textSize="17sp"
         android:fontFamily="@font/roboto_regular"
         android:layout_marginStart="25dp"
@@ -36,7 +21,7 @@
         android:id="@+id/email_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="Security Question"
         android:textSize="25sp"
         android:fontFamily="@font/roboto_regular"
         android:layout_marginStart="25dp"
@@ -44,11 +29,11 @@
         android:layout_above="@id/et_password1"
         android:layout_marginLeft="25dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/et_password1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="@string/e_mail"
+        android:hint="What was the name of your first school"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:padding="15dp"
@@ -62,7 +47,7 @@
         android:id="@+id/passwrd_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:text="Answer"
         android:textSize="25sp"
         android:fontFamily="@font/roboto_regular"
         android:layout_marginStart="25dp"
@@ -74,7 +59,7 @@
         android:id="@+id/et_password_again"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="@string/password"
+        android:hint="Answer"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
@@ -90,30 +75,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/et_password_again"
-        android:background="@drawable/btn_custom"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_custom"
         android:fontFamily="@font/roboto_regular"
-        android:textColor="@android:color/white"
-        android:text="@string/login"/>
-
-
-    <TextView
-        android:id="@+id/reset_ps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset Password"
-        android:textSize="15sp"
-        android:textColor="#DA8607"
-        android:layout_alignParentRight="true"
-        android:paddingRight="30dp"
-        android:fontFamily="@font/roboto_regular"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/btn_login"
-        android:layout_marginLeft="25dp" />
+        android:text="Submit"
+        android:textColor="@android:color/white" />
 
     <ImageView
         android:id="@+id/register_image"
@@ -127,7 +95,7 @@
         android:id="@+id/swipeRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/swipe_left_for_register"
+        android:text="@string/swipe_right_for_login"
         android:textSize="15sp"
         android:fontFamily="@font/roboto_regular"
         android:layout_centerHorizontal="true"
